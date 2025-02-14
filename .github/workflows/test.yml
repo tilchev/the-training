@@ -13,7 +13,7 @@ jobs:
           java-version: 17
 
       - name: Run tests
-        run: ping -c 4 google.com
+        run: ping -c 4 google.com | tee build/allure-results/ping.txt
 
       - name: Load test report history
         uses: actions/checkout@v3
