@@ -32,6 +32,9 @@ jobs:
           allure_results: build/allure-results
 
       - name: Publish test report
+        env:
+          GITHUB_LOGIN: xxx
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: peaceiris/actions-gh-pages@v3
         if: always()
         with:
