@@ -1,3 +1,4 @@
 [submodule "on-demand"]
-	path = on-demand
-	url = git@github.com:tilchev/on-demand.git
+    path = on-demand
+    url = https://github.com/tilchev/on-demand
+    branch = gh-pages
