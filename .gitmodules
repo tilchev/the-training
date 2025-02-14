@@ -1,0 +1,4 @@
+[submodule "on-demand"]
+    path = on-demand
+    url = https://github.com/tilchev/on-demand
+    branch = master
