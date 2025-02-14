@@ -1,0 +1,3 @@
+[submodule "on-demand"]
+	path = on-demand
+	url = git@github.com:tilchev/on-demand.git
