@@ -13,13 +13,14 @@ jobs:
           java-version: 17
 
       - name: Run tests
-        run: ping -c 4 google.com | tee allure-results/ping.txt
+        run: ping -c 4 google.com | tee ping.txt
 
       - name: Load test report history
         uses: actions/checkout@v3
         if: always()
         continue-on-error: true
         with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           ref: gh-pages
           path: gh-pages
 
@@ -27,6 +28,7 @@ jobs:
         uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           gh_pages: gh-pages
           allure_history: allure-history
           allure_results: allure-results
