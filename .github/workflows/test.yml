@@ -38,7 +38,7 @@ jobs:
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main
+          publish_branch: gh-pages
           publish_dir: allure-history
           destination_dir: on-demand
           commit_message: ${{ github.event_name }}
